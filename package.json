@@ -1,35 +1,13 @@
 {
-  "name": "solidity-starter",
+  "name": "exactly-finance-test",
   "version": "0.1.0",
   "description": "Solidity starter",
   "main": "index.js",
   "scripts": {
-    "prepublishOnly": "scripts/prepublish",
-    "build": "scripts/build",
-    "clean": "rm -rf build/ cache/ dist/",
-    "compile": "hardhat compile",
-    "test": "scripts/test",
-    "test:gas": "RUN_EVM=true REPORT_GAS=true scripts/test",
-    "test:coverage": "scripts/coverage",
-    "lint": "npm run lint:ts && npm run lint:sol",
-    "lint:fix": "npm run lint:ts:fix && npm run lint:sol:fix",
-    "lint:ts": "eslint '*/**/*.{js,ts}'",
-    "lint:ts:fix": "eslint '*/**/*.{js,ts}' --fix",
-    "lint:sol": "solium --dir ./contracts",
-    "lint:sol:fix": "solium --dir ./contracts --fix",
-    "prettier": "npm run prettier:ts && npm run prettier:sol",
-    "prettier:ts": "prettier --write 'test/**/*.ts'",
-    "prettier:sol": "prettier --write 'contracts/*.sol'",
-    "security": "scripts/security",
-    "flatten": "scripts/flatten",
-    "verify": "hardhat verify"
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test"
   },
-  "files": [
-    "dist/**/*",
-    "README.md",
-    "LICENSE"
-  ],
-  "author": "Ariel Barmat",
+  "author": "Alberto Mira",
   "license": "MIT",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
@@ -60,17 +38,11 @@
     "hardhat": "^2.6.1",
     "hardhat-abi-exporter": "^2.2.0",
     "hardhat-contract-sizer": "^2.0.3",
-    "hardhat-gas-reporter": "^1.0.4",
-    "prettier": "^2.1.1",
-    "prettier-plugin-solidity": "^1.0.0-alpha.56",
-    "solidity-coverage": "^0.7.10",
-    "truffle-flattener": "^1.4.4",
-    "ts-node": "^10.5.0",
-    "typechain": "^7.0.0",
-    "typescript": "^4.0.2"
+    "hardhat-gas-reporter": "^1.0.4"
   },
   "dependencies": {
     "@openzeppelin/hardhat-defender": "^1.6.0",
-    "@openzeppelin/test-helpers": "^0.5.15"
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "solidity-coverage": "^0.7.20"
   }
 }

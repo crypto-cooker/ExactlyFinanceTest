@@ -1,4 +1,4 @@
-# Lossless V3
+# Exactly Finance Test
 
 In-depth documentation on Lossless V3 is available at [lossless.cash](https://lossless-cash.gitbook.io/lossless/).
 
